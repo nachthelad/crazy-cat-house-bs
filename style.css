@@ -26,7 +26,7 @@ font-family: 'Yatra One', cursive;*/
 ::-webkit-scrollbar-thumb {
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    background: rgba(255, 255, 255, 0.3);
+    background: #ffffff4d;
 }
 
 ::-webkit-scrollbar-thumb:window-inactive {
@@ -88,7 +88,8 @@ h1, p{
     justify-content: center;
     width: 600px;
     height: 530px;
-    border: 2px solid black;
+    border: 0.4rem solid #c9ae7e;
+    border-radius: 0.6rem;
 }
 
 .galeria img{
@@ -97,7 +98,7 @@ h1, p{
     object-fit: cover;
     opacity: 0.8;
     transition: .5 ease;
-    border: 1px solid black;
+    border: 1px solid #c9ae7e;
 }
 
 .galeria img:hover{
@@ -151,6 +152,9 @@ h1, p{
 .form-color{
     background-color: #c08b28;
     width: 600px fit-content;
+    border: 0.2rem solid #c9ae7e;
+    padding: 1rem;
+    border-radius: 0.4rem;
 }
 
 .fotos-border{
@@ -159,7 +163,7 @@ h1, p{
 }
 
 .pspace{
-    width: fit-content;
+    width: 800px;
 }
 
 .abox{
