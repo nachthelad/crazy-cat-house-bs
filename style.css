@@ -80,6 +80,7 @@ h1, p{
 .galeria-michis{
     display: flex;
     justify-content: center;
+    width: 600px fit-content;
 }
 
 .galeria{
@@ -101,7 +102,7 @@ h1, p{
 
 .galeria img:hover{
     cursor: crosshair;
-    width: 600px;
+    width: 400px;
     opacity: 1;
     filter: contrast(110%);
 	transition: 0.8s ease-in;
@@ -178,7 +179,7 @@ h1, p{
     border-radius: 30px;
     bottom: 20px;
     right: 20px;
-  }
+}
 
 @media (max-width: 445px) {
     
