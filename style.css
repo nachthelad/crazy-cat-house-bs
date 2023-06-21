@@ -30,7 +30,7 @@ font-family: 'Yatra One', cursive;*/
 }
 
 ::-webkit-scrollbar-thumb:window-inactive {
-    background: rgb(0, 0, 0);
+    background: #000000;
 }
 
 .navbar{
@@ -205,6 +205,8 @@ h1, p{
         max-width: fit-content;
     }
 }
+
+/* Arreglar footer, recomendaciones choca con adopta en res 768 a 991*/
 
 @media (max-width: 891px) {
     .row-centered{
