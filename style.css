@@ -1,193 +1,191 @@
-@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@500&family=Ubuntu:wght@300;400&family=Yatra+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@500&family=Ubuntu:wght@300;400&family=Yatra+One&display=swap");
 
 /* font-family: 'Mukta', sans-serif;
 font-family: 'Ubuntu', sans-serif;
 font-family: 'Yatra One', cursive;*/
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Ubuntu', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
 }
 
 /* scrollbar */
 ::-webkit-scrollbar {
-    direction:ltr;
-    width: 5px;
-    height: 5px;    
+  direction: ltr;
+  width: 5px;
+  height: 5px;
 }
 
 ::-webkit-scrollbar-track {
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    background: #ffffff4d;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #ffffff4d;
 }
 
 ::-webkit-scrollbar-thumb:window-inactive {
-    background: #000000;
+  background: #000000;
 }
 
-.navbar{
-    background-color: #c08b28 !important;
+.navbar {
+  background-color: #c08b28 !important;
 }
 
-.navbar-toggler{
-    border: none !important;
+.navbar-toggler {
+  border: none !important;
 }
 
-.navbar-nav{
-    margin-left: auto;
-    font-size: large;
+.navbar-nav {
+  margin-left: auto;
+  font-size: large;
 }
 
-.logo{
-    text-transform: uppercase;
-    font-size: 1.5rem;
+.logo {
+  text-transform: uppercase;
+  font-size: 1.5rem;
 }
 
-.jumbotron{
-    background-image: url(img/cat.jpg);
-    background-position: center;
-    background-size: cover;
-    border-radius: 0;
-    margin-bottom: 0;
+.jumbotron {
+  background-image: url(img/cat.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 0;
+  margin-bottom: 0;
 }
 
-h2{
-    background-color: #c9ae7e;
-    text-align: center;
-    color: #fff;
-    text-transform: uppercase;
-    padding: 1rem;
-    margin-bottom: 0;
+h2 {
+  background-color: #c9ae7e;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 1rem;
+  margin-bottom: 0;
 }
 
-.container-fluid, .form-group{
-    background-color: #c08b28;
+.container-fluid,
+.form-group {
+  background-color: #c08b28;
 }
 
-h1, p{
-    font-family: 'Mukta', sans-serif;
-    text-align: justify;
+h1,
+p {
+  font-family: "Mukta", sans-serif;
+  text-align: justify;
 }
 
-.galeria-michis{
-    display: flex;
-    justify-content: center;
+.galeria-michis {
+  display: flex;
+  justify-content: center;
 }
 
-.galeria{
-    display: flex;
-    justify-content: center;
-    width: 600px;
-    height: 500px;
-    border: 0.4rem solid #c9ae7e;
-    border-radius: 0.6rem;
+.galeria {
+  display: flex;
+  justify-content: center;
+  width: 600px;
+  height: 500px;
+  border: 0.4rem solid #c9ae7e;
+  border-radius: 0.6rem;
 }
 
-.galeria img{
-    width: 0px;
-    flex-grow: 1;
-    object-fit: cover;
-    opacity: 0.8;
-    transition: .3 ease;
-    border: 1px solid #c9ae7e;
+.galeria img {
+  width: 0px;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: 0.3 ease;
+  border: 1px solid #c9ae7e;
 }
 
-.galeria img:hover{
-    cursor: crosshair;
-    width: 400px;
-    opacity: 1;
-    filter: contrast(110%);
-	transition: 0.8s ease-in;
+.galeria img:hover {
+  cursor: crosshair;
+  width: 400px;
+  opacity: 1;
+  filter: contrast(110%);
+  transition: 0.8s ease-in;
 }
 
-.card{
-    border: none;
-    background-color: #c9ae7e !important;
-    margin: 0.5rem;
-    border-radius: 1rem;
+.card {
+  border: none;
+  background-color: #c9ae7e !important;
+  margin: 0.5rem;
+  border-radius: 1rem;
 }
 
-.card img{
-    padding: 1rem;
-    border-radius: 2rem;
+.card img {
+  padding: 1rem;
+  border-radius: 2rem;
 }
 
-.card-text{
-    color: #000;
+.card-text {
+  color: #000;
 }
 
-.btn{
-    background-color: #c08b28;
-    margin: 0.1rem;
+.btn {
+  background-color: #c08b28;
+  margin: 0.1rem;
 }
 
-.btn-submit:hover{
-    background-color: #7e6434;
-    color: #fff;
+.btn-submit:hover {
+  background-color: #7e6434;
+  color: #fff;
 }
 
-.form-control, .form-control:focus{
-    background-color: #c9ae7e;
-    color: #fff;
-    border: none;
+.form-control,
+.form-control:focus {
+  background-color: #c9ae7e;
+  color: #fff;
+  border: none;
 }
 
-.form-control::placeholder{
-    color: wheat;
+.form-control::placeholder {
+  color: wheat;
 }
 
-.btn-submit{
-    background-color: #c9ae7e;
-    color: #fff;
+.btn-submit {
+  background-color: #c9ae7e;
+  color: #fff;
 }
 
-.form-color{
-    background-color: #c08b28;
-    width: 600px fit-content;
-    border: 0.2rem solid #c9ae7e;
-    padding: 1rem;
-    border-radius: 0.4rem;
+.form-color {
+  background-color: #c08b28;
+  width: 600px fit-content;
+  border: 0.2rem solid #c9ae7e;
+  padding: 1rem;
+  border-radius: 0.4rem;
 }
 
-.fotos-border{
-    border: 1px solid #c9ae7e;
-    color: wheat;
+.fotos-border {
+  border: 1px solid #c9ae7e;
+  color: wheat;
 }
 
-.pspace{
-    width: 800px;
+.pspace {
+  width: 800px;
 }
 
-.abox{
-    background-color: #c08b28;
+.footer-bg {
+  background-color: #c9ae7e;
 }
 
-.footer-bg{
-    background-color: #c9ae7e;
-}
-
-.cr-bg{
-    background-color: #c9ae7e;
+.cr-bg {
+  background-color: #c9ae7e;
 }
 
 #btn-back-to-top {
-    position: fixed;
-    border-radius: 30px;
-    bottom: 20px;
-    right: 20px;
+  position: fixed;
+  border-radius: 30px;
+  bottom: 20px;
+  right: 20px;
 }
 
-.card-footer{
-    background-color: transparent;
-    text-align: center;
-    display: flex;
+.card-footer {
+  background-color: transparent;
+  text-align: center;
+  display: flex;
 }
-
