@@ -15,16 +15,17 @@ font-family: 'Yatra One', cursive;*/
     direction:ltr;
     width: 5px;
     height: 5px;    
+    background: #c9ae7e;
 }
 
 ::-webkit-scrollbar-track {
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
 }
 
 ::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
     background: #c08b28;
 }
 
