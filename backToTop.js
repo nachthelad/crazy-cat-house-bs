@@ -1,7 +1,7 @@
 const backToTop = document.getElementById("btn-back-to-top");
 
 window.addEventListener("scroll", function () {
-  if (window.scrollY > 100) {
+  if (window.scrollY > 20) {
     // Mostrar el botón
     backToTop.style.display = "block";
     backToTop.style.opacity = "1";

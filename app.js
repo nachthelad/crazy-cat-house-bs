@@ -24,8 +24,8 @@ input.addEventListener("change", function () {
   // Agrega una "X" al contenedor
   const deleteButton = document.createElement('span');
   deleteButton.textContent = 'X';
-  deleteButton.className = 'ml-1 mr-2'; // Añade un margen para separar la "X" del nombre
-  deleteButton.style.cursor = 'pointer'; // Cambia el cursor para que parezca un botón
+  deleteButton.className = 'ml-1 mr-2'; 
+  deleteButton.style.cursor = 'pointer'; 
 
   // Agrega un controlador de eventos de clic para eliminar el archivo
   deleteButton.addEventListener('click', function() {
