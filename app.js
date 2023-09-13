@@ -69,46 +69,53 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  const mpBtn = document.getElementById("mpBtn");
-  const cryptoBtn = document.getElementById("cryptoBtn");
+  // Constantes
+  const ALIAS_TEXT = 'iventura.mp';
+  const WALLET_TEXT = '0xFCdf4865Ef48A401f5Ed4eB53F1874C7047e51d1';
 
   // Función para copiar texto al portapapeles
-  function copyTextToClipboard(text) {
-    const tempInput = document.createElement("input");
-    tempInput.value = text;
-    document.body.appendChild(tempInput);
-    tempInput.select();
-    document.execCommand("copy");
-    document.body.removeChild(tempInput);
+  async function copyTextToClipboard(text) {
+    try {
+      await navigator.clipboard.writeText(text);
+      console.log("Texto copiado al portapapeles");
+      Swal.fire('Texto copiado', '', 'success');
+    } catch (err) {
+      console.error("No se pudo copiar el texto: ", err);
+    }
   }
 
-  mpBtn.addEventListener('click', () => {
-    Swal.fire({
-      title: 'Alias',
-      html: 'iventura.mp <i class="fa-regular fa-copy fa-sm copyBtn" id="mpCopyIcon"></i>',
-      confirmButtonText: '¡Listo!'
-    });
+  // Función para manejar los clics de copiar
+  function handleCopyClick(textToCopy) {
+    copyTextToClipboard(textToCopy);
+  }
 
-    const mpCopyIcon = document.getElementById('mpCopyIcon');
-    mpCopyIcon.addEventListener('click', () => {
-      const textToCopy = 'iventura.mp';
-      copyTextToClipboard(textToCopy);
-      Swal.fire('Texto copiado', '', 'success');
-    });
-  });
+  // Manejo de evento para botones
+  document.addEventListener('click', function(e) {
+    if (e.target.id === "mpBtn") {
+      Swal.fire({
+        title: 'Alias',
+        html: `${ALIAS_TEXT} <i class="fa-regular fa-copy fa-sm copyBtn" data-text="${ALIAS_TEXT}" data-toggle="tooltip" data-placement="top" title="Copiar" ></i>`,
+        showConfirmButton: false
+      });
+    }
 
-  cryptoBtn.addEventListener('click', () => {
-    Swal.fire({
-      title: 'Wallet',
-      html: '0xFCdf4865Ef48A401f5Ed4eB53F1874C7047e51d1 <i class="fa-regular fa-copy fa-sm copyBtn" id="cryptoCopyIcon"></i>',
-      confirmButtonText: '¡Listo!'
-    });
+    if (e.target.id === "cryptoBtn") {
+      Swal.fire({
+        title: 'Wallet',
+        html: `${WALLET_TEXT} <i class="fa-regular fa-copy fa-sm copyBtn" data-text="${WALLET_TEXT}" data-toggle="tooltip" data-placement="top" title="Copiar" ></i>`,
+        showConfirmButton: false
+      });
+    }
 
-    const cryptoCopyIcon = document.getElementById('cryptoCopyIcon');
-    cryptoCopyIcon.addEventListener('click', () => {
-      const textToCopy = '0xFCdf4865Ef48A401f5Ed4eB53F1874C7047e51d1';
-      copyTextToClipboard(textToCopy);
-      Swal.fire('Texto copiado', '', 'success');
-    });
+    // Verificar si se hizo clic en un ícono de copia
+    if (e.target.classList.contains('copyBtn')) {
+      const textToCopy = e.target.getAttribute('data-text');
+      handleCopyClick(textToCopy);
+    }
   });
 });
+
+// inicializando todos los tooltips
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
