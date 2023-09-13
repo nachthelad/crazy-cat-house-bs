@@ -1,6 +1,7 @@
 const input = document.getElementById("customFile");
 const fileList = document.getElementById("fileList");
 
+
 input.addEventListener("change", function () {
   // Obtiene la lista de archivos seleccionados
   const files = input.files;
@@ -43,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const divToHide = document.getElementById("divToHide");
   const agreeP = document.getElementById("agreeP");
 
-  agreeButton.addEventListener("click", function () {
+  agreeButton.addEventListener("click", e => {
     Swal.fire({
       icon: "warning",
       title: "Recuerda...",
@@ -67,3 +68,47 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const mpBtn = document.getElementById("mpBtn");
+  const cryptoBtn = document.getElementById("cryptoBtn");
+
+  // Función para copiar texto al portapapeles
+  function copyTextToClipboard(text) {
+    const tempInput = document.createElement("input");
+    tempInput.value = text;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand("copy");
+    document.body.removeChild(tempInput);
+  }
+
+  mpBtn.addEventListener('click', () => {
+    Swal.fire({
+      title: 'Alias',
+      html: 'iventura.mp <i class="fa-regular fa-copy fa-sm copyBtn" id="mpCopyIcon"></i>',
+      confirmButtonText: '¡Listo!'
+    });
+
+    const mpCopyIcon = document.getElementById('mpCopyIcon');
+    mpCopyIcon.addEventListener('click', () => {
+      const textToCopy = 'iventura.mp';
+      copyTextToClipboard(textToCopy);
+      Swal.fire('Texto copiado', '', 'success');
+    });
+  });
+
+  cryptoBtn.addEventListener('click', () => {
+    Swal.fire({
+      title: 'Wallet',
+      html: '0xFCdf4865Ef48A401f5Ed4eB53F1874C7047e51d1 <i class="fa-regular fa-copy fa-sm copyBtn" id="cryptoCopyIcon"></i>',
+      confirmButtonText: '¡Listo!'
+    });
+
+    const cryptoCopyIcon = document.getElementById('cryptoCopyIcon');
+    cryptoCopyIcon.addEventListener('click', () => {
+      const textToCopy = '0xFCdf4865Ef48A401f5Ed4eB53F1874C7047e51d1';
+      copyTextToClipboard(textToCopy);
+      Swal.fire('Texto copiado', '', 'success');
+    });
+  });
+});
