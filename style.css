@@ -63,7 +63,7 @@ html {
   margin-bottom: 0;
 }
 
-h2 {
+.h2 {
   background-color: #c9ae7e;
   text-align: center;
   color: #fff;
@@ -247,4 +247,8 @@ span.mr-2{
 /* Estilo básico del ícono */
 .icon-with-hover {
   cursor: pointer;
+}
+
+.hidden {
+  display: none !important;
 }

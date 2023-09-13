@@ -14,6 +14,7 @@
       integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer" />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <title>Crazy Cat House</title>
@@ -60,7 +61,7 @@
       </div>
       <!-- Jumbotron -->
       <!-- Nosotros -->
-      <h2 id="Nosotros">Nosotros</h2>
+      <h2 class="h2" id="Nosotros">Nosotros</h2>
       <div class="container-fluid p-4">
         <div id="galeriaMichis" class="row">
           <div
@@ -111,7 +112,7 @@
       </div>
       <!-- Nosotros -->
       <!-- Recomendaciones -->
-      <h2 id="Recomendaciones">Recomendaciones de profesionales</h2>
+      <h2 class="h2" id="Recomendaciones">Recomendaciones de profesionales</h2>
       <div class="container-fluid p-4">
         <div class="row">
           <div class="card-deck">
@@ -228,7 +229,7 @@
       </div>
       <!-- Recomendaciones -->
       <!-- Adopta -->
-      <h2 id="Adopta">Adopta</h2>
+      <h2 class="h2" id="Adopta">Adopta</h2>
       <div class="container-fluid p-4">
         <div class="row">
           <div class="col-lg-12 d-flex justify-content-center">
@@ -266,18 +267,18 @@
           </div>
           <div class="col-md-12 d-flex pt-2 justify-content-center text-white">
             <div class="d-block">
-              <p class="">
+              <p id="agreeP">
                 <u>Si estás de acuerdo, por favor hace clic en este botón</u>
               </p>
               <div class="d-flex justify-content-center">
-                <button class="btn btn-submit d-flex align-content-center">
+                <button id="agreeBtn" class="btn btn-submit d-flex align-content-center">
                   Estoy de acuerdo
                 </button>
               </div>
             </div>
           </div>
-          <div class="col-md-12 d-flex pt-2 justify-content-center text-white">
-            <div class="form-color d-flex align-items-center">
+          <div id="divToHide" class="col-md-12 d-flex pt-2 justify-content-center text-white hidden">
+            <div class="form-color d-flex align-items-center" >
               <form action="#" class="mx-auto">
                 <div class="form-group">
                   <label for="name">Nombre y Apellido</label>
@@ -348,7 +349,7 @@
       <!-- Adoptá -->
 
       <!-- Ayudanos -->
-      <h2 id="Ayudanos">Ayudanos</h2>
+      <h2 class="h2" id="Ayudanos">Ayudanos</h2>
       <div class="container-fluid">
         <div class="d-flex-column text-center p-4 abox">
           <p class="text-white text-center">
@@ -361,7 +362,7 @@
       <div
         id="botonDonacion"
         class="abox d-flex align-items-start justify-content-center text-white">
-        <div class="d-flex flex-column text-white">
+        <div class="d-flex flex-column text-white mr-2">
           <span class="text-center">MercadoPago</span>
           <button class="btn btn-submit px-4 mb-2">Ver Alias</button>
         </div>
