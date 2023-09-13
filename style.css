@@ -183,7 +183,7 @@ p {
 }
 
 .pspace {
-  width: 800px;
+  width: 1200px;
 }
 
 .abox {
@@ -251,4 +251,17 @@ span.mr-2{
 
 .hidden {
   display: none !important;
+}
+
+@media  screen and (max-width: 252px) {
+  .abox{
+    display: block !important;
+  }
+  .aliasMP{
+    margin-right: 0 !important;
+  }
+  .iconSN{
+    margin-right: 10px !important;
+    margin-left: 10px !important;
+  }
 }
