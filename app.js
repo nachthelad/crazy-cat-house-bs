@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// inicializando todos los tooltips
+// Inicializando todos los tooltips
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
